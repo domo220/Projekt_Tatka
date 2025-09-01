@@ -1,0 +1,16 @@
+.circle {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+/* dvě barvy */
+.circle.white {
+    background: #afafaf;
+  }
+  
+  .circle.black {
+    background: #000000;
+  }
+  
