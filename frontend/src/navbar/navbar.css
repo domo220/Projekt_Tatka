@@ -1,0 +1,104 @@
+/* .navbar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  gap: 10vmin;
+  align-items: center;
+  height: 8vh;
+  padding: 0 2rem;
+  padding-right: 4rem;
+  z-index: 10; 
+  width: 190vmin;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 2rem; 
+}
+
+.navbar .Name {
+  margin-right: 8rem;
+  font-size: 1.5rem;
+  height: 8vh;
+  width: 4vmin;
+}
+
+.background-img {
+  height: 80vh;
+  width: 203vmin;
+  object-fit: cover;
+
+  z-index: -1;
+}
+
+.slider {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+} */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* můžeš upravit podle potřeby */
+  overflow: hidden; /* zajistí, že nic nepřesahuje */
+}
+
+.background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: -1; /* pod navbar */
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 8vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3); /* lehce průhledné, volitelné */
+  box-sizing: border-box;
+  color: #f5efe6;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px); /* Safari */
+}
+
+.navbar .Name {
+  font-size: 1.5rem;
+  flex-shrink: 0; /* neškrcení názvu */
+}
+
+.navbar .Design,
+.navbar .Kontakt {
+  font-size: 1rem;
+}
+
+.navbar > div {
+  margin: 0 1rem; /* mezery mezi položkami */
+}
+
+/* Responzivní přizpůsobení menších obrazovek */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .navbar .Name {
+    font-size: 1.2rem;
+  }
+
+  .navbar .Design,
+  .navbar .Kontakt {
+    font-size: 0.9rem;
+  }
+}

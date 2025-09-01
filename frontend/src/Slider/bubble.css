@@ -1,16 +1,25 @@
 .circle {
-    width: 20vmin;
-    height: 20vmin;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+  width: 3vmin;
+  height: 3vmin;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 /* dvě barvy */
 .circle.white {
-    background: #afafaf;
-  }
-  
-  .circle.black {
-    background: #000000;
-  }
-  
+  background: #afafaf;
+}
+
+.circle.black {
+  background: #000000;
+}
+
+.circlegroup {
+  position: absolute; /* nebo relative podle layoutu */
+  top: 95%; /* nastav podle potřeby */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* vyšší než pozadí */
+  display: flex;
+  gap: 1rem;
+}

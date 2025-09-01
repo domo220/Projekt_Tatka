@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 
-import './App.css';
+import "./App.css";
 
-
-import Circle from "./Slider/bubble";
+import CircleGroup from "./Slider/bubble";
+import Slider from "./navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <Circle/>
-     </div>
-     
+      {/* <CircleGroup /> */}
+
+      <Slider />
+    </div>
   );
 }
 
