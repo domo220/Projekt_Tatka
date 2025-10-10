@@ -1,6 +1,6 @@
 .circle {
-  width: 3vmin;
-  height: 3vmin;
+  width: 2vmin;
+  height: 2vmin;
   border-radius: 50%;
   cursor: pointer;
 }

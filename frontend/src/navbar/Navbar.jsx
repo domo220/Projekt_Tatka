@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./navbar.css";
-import CircleGroup from "../Slider/bubble";
+import CircleGroup from "../Slider/CircleGroup";
 import image1 from "../Slider/DSCF0006.jpg";
 
 function Navbar() {
