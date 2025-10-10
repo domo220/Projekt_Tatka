@@ -17,7 +17,7 @@ function Circle({ isBlack, onClick }) {
 
 function CircleGroup({ setImage }) {
   const [circles, setCircles] = useState([true, false, false, false, false]);
-
+  const images = [image1, image2, image3, image4, image5];
   const nextStep = () => {
     if (circles[0]) {
       setCircles([false, true, false, false, false]);
