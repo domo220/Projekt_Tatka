@@ -1,0 +1,118 @@
+/* --- HLAVNÍ SEKCE --- */
+.contact-section {
+  background-color: #f0f0f0; /* Stejná šedá jako About */
+  padding: 100px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* --- KONTEJNER (Drží levou a pravou část) --- */
+.contact-container {
+  width: 100%;
+  max-width: 1500px; /* Stejná šířka jako u About, aby to lícovalo */
+  display: flex;
+  justify-content: space-between; /* Roztáhne je od sebe (vlevo a vpravo) */
+  gap: 100px; /* Mezera mezi textem a formulářem */
+  align-items: flex-start; /* Zarovnat nahoru */
+}
+
+/* --- LEVÁ ČÁST (INFO) --- */
+.contact-info {
+  flex: 1; /* Zabere dostupný prostor */
+  max-width: 500px; /* Omezíme šířku textu */
+}
+
+.contact-title {
+  font-size: 2.25rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.contact-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase; /* Na obrázku je text velkými písmeny */
+}
+
+/* Ikony */
+.social-icons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.icon-link {
+  font-size: 2rem; /* Velikost ikon */
+  color: #000; /* Černá barva */
+  transition: transform 0.2s;
+}
+
+.icon-link:hover {
+  transform: scale(1.1); /* Efekt při najetí myší */
+}
+
+/* --- PRAVÁ ČÁST (FORMULÁŘ) --- */
+.contact-form-wrapper {
+  flex: 1;
+  max-width: 600px; /* Šířka formuláře */
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Mezery mezi řádky formuláře */
+}
+
+/* Řádek pro Jméno a Příjmení */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* --- STYLY PRO INPUTY --- */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc; /* Jemný šedý rámeček */
+  background-color: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box; /* Aby padding nezvětšoval šířku */
+}
+
+/* Styl placeholderu (ten šedý text uvnitř) */
+::placeholder {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.form-textarea {
+  height: 200px; /* Výška pole pro zprávu */
+  resize: none; /* Uživatel nemůže měnit velikost */
+}
+
+/* --- RESPONZIVITA --- */
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column; /* Pod sebe na tabletu */
+    gap: 60px;
+  }
+
+  .contact-info,
+  .contact-form-wrapper {
+    max-width: 100%; /* Využít celou šířku */
+  }
+
+  .form-row {
+    flex-direction: column; /* I jméno a příjmení pod sebe na menším displeji */
+  }
+}

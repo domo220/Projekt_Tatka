@@ -1,0 +1,114 @@
+/* Celá sekce */
+.residential-section {
+  background-color: #e9e9e9;
+  padding: 60px 20px; /* Změna: Stačí malé odsazení z krajů (20px), aby se text nelepil na hrany mobilu */
+}
+
+/* Obal pro vycentrování obsahu - KLÍČOVÁ ZMĚNA */
+.residential-container {
+  width: 100%; /* Roztáhni se na 100% dostupné šířky */
+  max-width: 1400px; /* ...ale maximálně do šířky 1400px (to nahrazuje těch 300px paddingu) */
+  margin: 0 auto; /* Tohle zajistí vycentrování celého bloku na stránce */
+}
+
+/* Nadpis */
+.section-title {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: block;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+/* Mřížka pro karty */
+.cards-grid {
+  display: flex;
+  justify-content: center; /* Pokud se karty nevejdou, vycentrují se */
+  gap: 40px; /* Změna: 130px je moc, 40-60px je standard. Zbytek zařídí justify-content */
+  flex-wrap: wrap; /* Tohle je nutné - dovolí kartám spadnout na nový řádek */
+}
+
+/* Styl samotné karty */
+.card {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  /* Flexibilita karty */
+  flex: 1; /* Snaž se roztáhnout */
+  min-width: 320px; /* Ale nikdy nebuď užší než 300px (jinak spadni na další řádek) */
+  max-width: 320px; /* A nikdy nebuď širší než 400px (aby na velkém monitoru nebyly gigantické) */
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Pojistka pro mobily, aby nebyly nalepené pod sebou */
+}
+
+/* Obal obrázku */
+.card-image-wrapper {
+  height: 250px;
+  width: 100%;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Textová část */
+.card-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* --- MEDIA QUERIES (Pravidla pro různé velikosti) --- */
+
+/* 1. Pro Tablety a menší notebooky (pod 1200px) */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 2rem; /* Trochu zmenšíme nadpis */
+  }
+  .cards-grid {
+    gap: 30px; /* Zmenšíme mezery */
+  }
+}
+
+/* 2. Pro Mobily (pod 768px) */
+@media (max-width: 768px) {
+  .residential-section {
+    padding: 40px 15px; /* Menší okraje sekce */
+  }
+
+  .section-title {
+    text-align: center; /* Na mobilu vypadá centr lépe */
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .cards-grid {
+    flex-direction: column; /* Karty hezky pod sebe */
+    align-items: center; /* Vycentrované */
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%; /* Využij celou šířku mobilu */
+    max-width: 360px; /* Ale ne víc než běžná šířka mobilu */
+  }
+}
