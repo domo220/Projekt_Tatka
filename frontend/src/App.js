@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./navbar/Navbar";
 import About from "./about/About";
 import Floor_design from "./floor_design/Floor_design";
-import Floor_prum from "./floor_prum/Floor_prum";
+// import Floor_prum from "./floor_prum/Floor_prum";
 import Contact from "./contact/Contact";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <About />
       <Floor_design />
-      <Floor_prum />
+      {/* <Floor_prum /> */}
       <Contact />
     </div>
   );

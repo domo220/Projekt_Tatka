@@ -7,7 +7,7 @@
 /* Obal pro vycentrování obsahu - KLÍČOVÁ ZMĚNA */
 .residential-container {
   width: 100%; /* Roztáhni se na 100% dostupné šířky */
-  max-width: 1400px; /* ...ale maximálně do šířky 1400px (to nahrazuje těch 300px paddingu) */
+  max-width: 1500px; /* ...ale maximálně do šířky 1400px (to nahrazuje těch 300px paddingu) */
   margin: 0 auto; /* Tohle zajistí vycentrování celého bloku na stránce */
 }
 
@@ -26,7 +26,7 @@
 .cards-grid {
   display: flex;
   justify-content: center; /* Pokud se karty nevejdou, vycentrují se */
-  gap: 40px; /* Změna: 130px je moc, 40-60px je standard. Zbytek zařídí justify-content */
+  gap: 60px; /* Změna: 130px je moc, 40-60px je standard. Zbytek zařídí justify-content */
   flex-wrap: wrap; /* Tohle je nutné - dovolí kartám spadnout na nový řádek */
 }
 
@@ -35,16 +35,24 @@
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
-
+  cursor: pointer;
+  transition: 0.3s ease;
   /* Flexibilita karty */
   flex: 1; /* Snaž se roztáhnout */
-  min-width: 320px; /* Ale nikdy nebuď užší než 300px (jinak spadni na další řádek) */
-  max-width: 320px; /* A nikdy nebuď širší než 400px (aby na velkém monitoru nebyly gigantické) */
+  min-width: 300px; /* Ale nikdy nebuď užší než 300px (jinak spadni na další řádek) */
+  max-width: 330px; /* A nikdy nebuď širší než 400px (aby na velkém monitoru nebyly gigantické) */
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   margin-bottom: 20px; /* Pojistka pro mobily, aby nebyly nalepené pod sebou */
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+  /* filter: brightness(0.875); */
 }
 
 /* Obal obrázku */

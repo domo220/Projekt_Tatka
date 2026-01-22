@@ -26,7 +26,7 @@
 .cards-grid {
   display: flex;
   justify-content: center; /* Pokud se karty nevejdou, vycentrují se */
-  gap: 40px; /* Změna: 130px je moc, 40-60px je standard. Zbytek zařídí justify-content */
+  gap: 60px; /* Změna: 130px je moc, 40-60px je standard. Zbytek zařídí justify-content */
   flex-wrap: wrap; /* Tohle je nutné - dovolí kartám spadnout na nový řádek */
 }
 
@@ -38,8 +38,8 @@
 
   /* Flexibilita karty */
   flex: 1; /* Snaž se roztáhnout */
-  min-width: 320px; /* Ale nikdy nebuď užší než 300px (jinak spadni na další řádek) */
-  max-width: 320px; /* A nikdy nebuď širší než 400px (aby na velkém monitoru nebyly gigantické) */
+  min-width: 330px; /* Ale nikdy nebuď užší než 300px (jinak spadni na další řádek) */
+  max-width: 330px; /* A nikdy nebuď širší než 400px (aby na velkém monitoru nebyly gigantické) */
 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;

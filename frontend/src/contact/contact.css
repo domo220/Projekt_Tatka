@@ -38,12 +38,14 @@
   margin-bottom: 40px;
   color: #333;
   text-transform: uppercase; /* Na obrázku je text velkými písmeny */
+  max-width: 300px;
+  place-self: center;
 }
 
 /* Ikony */
 .social-icons {
   display: flex;
-  gap: 25px;
+  gap: 50px;
   justify-content: center;
 }
 
