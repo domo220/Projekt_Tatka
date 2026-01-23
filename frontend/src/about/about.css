@@ -90,6 +90,74 @@
   margin: 0;
 }
 
+/* --- Stylizace obsahu textu --- */
+.text_content {
+  overflow: hidden; /* Schová text, který se nevejde */
+  transition:
+    max-height 0.5s ease-in-out,
+    mask-image 0.3s ease; /* Plynulá animace */
+  position: relative;
+}
+
+/* Stav: ZAVŘENO */
+.text_content.collapsed {
+  max-height: 200px; /* Výška, kterou chceš vidět ve sbaleném stavu (např. 5 řádků) */
+
+  /* Efekt "do ztracena" (fade out) na konci textu - vypadá to profesionálně */
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+/* Stav: OTEVŘENO */
+.text_content.expanded {
+  max-height: 2000px; /* Dostatečně velké číslo, aby se vešel celý text */
+  -webkit-mask-image: none; /* Zrušíme fade efekt */
+  mask-image: none;
+}
+
+/* --- Tlačítko "Číst více" --- */
+.read_more_btn {
+  background: none;
+  border: none;
+  color: #000; /* Barva textu tlačítka */
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Mezera mezi textem a šipkou */
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.read_more_btn:hover {
+  color: #555; /* Změna barvy po najetí */
+}
+
+/* --- CSS Šipka (pokud nepoužíváš ikonu z knihovny) --- */
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transition: transform 0.3s ease; /* Animace otočení */
+}
+
+/* Šipka dolů (zavřeno) */
+.arrow.down {
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+/* Šipka nahoru (otevřeno) */
+.arrow.up {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
 /* --- RESPONZIVITA (Jen pro mobily a tablety) --- */
 /* Zde říkáme: "Pokud je obrazovka menší než 1300px, začni se přizpůsobovat" */
 

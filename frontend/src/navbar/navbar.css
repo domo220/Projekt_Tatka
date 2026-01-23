@@ -187,7 +187,7 @@
     top: 76px;
     left: -100%; /* Schované úplně vpravo mimo obrazovku */
     width: 100%; /* Šířka menu */
-    height: 20vh; /* Přes celou výšku */
+    height: 175px; /* Přes celou výšku */
     /* background-color: black; */
     flex-direction: column; /* Položky pod sebe */
     justify-content: center; /* Vycentrované svisle */
