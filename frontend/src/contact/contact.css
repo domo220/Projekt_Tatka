@@ -21,7 +21,7 @@
 /* --- LEVÁ ČÁST (INFO) --- */
 .contact-info {
   flex: 1; /* Zabere dostupný prostor */
-  max-width: 500px; /* Omezíme šířku textu */
+  max-width: 300px; /* Omezíme šířku textu */
 }
 
 .contact-title {
@@ -107,6 +107,8 @@
   .contact-container {
     flex-direction: column; /* Pod sebe na tabletu */
     gap: 60px;
+    max-width: 600px;
+    align-items: center;
   }
 
   .contact-info,

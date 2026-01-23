@@ -25,7 +25,7 @@
 /* Mřížka pro karty */
 .cards-grid {
   display: flex;
-  justify-content: center; /* Pokud se karty nevejdou, vycentrují se */
+  justify-content: space-between; /* Pokud se karty nevejdou, vycentrují se */
   gap: 60px; /* Změna: 130px je moc, 40-60px je standard. Zbytek zařídí justify-content */
   flex-wrap: wrap; /* Tohle je nutné - dovolí kartám spadnout na nový řádek */
 }
@@ -94,6 +94,10 @@
   }
   .cards-grid {
     gap: 30px; /* Zmenšíme mezery */
+    max-width: 800px;
+  }
+  .residential-container {
+    max-width: 800px;
   }
 }
 

@@ -23,6 +23,7 @@
   max-width: 1500px;
   padding-left: 20px;
   box-sizing: border-box;
+  display: flex;
 }
 
 /* --- KONTEJNER --- */
@@ -31,10 +32,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 200px; /* Tvoje původní mezera */
-
-  /* Toto zajistí, že na velkém monitoru to máš odsazené (jako s paddingem),
-     ale na menším se to vejde. */
+  justify-content: space-between;
   width: 100%;
   max-width: 1500px;
   padding: 0 20px; /* Jen malý okraj, aby se to nelepilo na hrany */
@@ -45,8 +43,8 @@
 .image_wrapper {
   position: relative;
   /* Vracíme tvou pevnou velikost, aby se design nerozpadl */
-  width: 500px;
-  height: 600px;
+  width: 600px;
+  height: 700px;
   margin-top: 45px;
   flex-shrink: 0; /* Zakáže smrskávání obrázku */
 }
@@ -54,8 +52,8 @@
 .about_square {
   position: absolute;
   /* Vracíme tvé pevné rozměry */
-  width: 500px;
-  height: 600px;
+  width: 600px;
+  height: 700px;
   background-color: #d3d3d3;
   top: -45px;
   left: 60px;
@@ -67,8 +65,8 @@
   z-index: 2;
   display: block;
   /* Vracíme tvé pevné rozměry */
-  width: 500px;
-  height: 600px;
+  width: 600px;
+  height: 700px;
   /* Aby se fotka nedeformovala, když má pevné rozměry: */
   object-fit: cover;
 
@@ -83,27 +81,54 @@
   margin: 0;
   /* Přidáme jen limit šířky textu, aby na ultra širokém monitoru nebyl řádek přes 2 metry */
   max-width: 600px;
+
+  /* --- OPRAVA CHOVÁNÍ TEXTU --- */
+  flex: 1; /* Text vyplní zbývající prostor, ale nebude se cpát přes limit */
 }
 
 .about_text p {
   margin: 0;
-  line-height: 1.5;
 }
 
 /* --- RESPONZIVITA (Jen pro mobily a tablety) --- */
 /* Zde říkáme: "Pokud je obrazovka menší než 1300px, začni se přizpůsobovat" */
 
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
   .about_container {
     gap: 100px; /* Zmenšíme mezeru, aby se to vešlo */
   }
+  .about_text {
+    font-size: 1.15rem;
+  }
+
+  .image_wrapper,
+  .about_square,
+  .about_image {
+    width: 500px;
+    height: 600px;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1215px) {
+  .about_container {
+    gap: 100px; /* Zmenšíme mezeru, aby se to vešlo */
+  }
+  .about_text {
+    font-size: 1.1rem;
+  }
+
+  .image_wrapper,
+  .about_square,
+  .about_image {
+    width: 450px;
+    height: 550px;
+  }
+}
+
+@media (max-width: 1145px) {
   .about_container {
     flex-direction: column; /* Hodíme to pod sebe */
     align-items: center; /* Vycentrujeme */
-    gap: 80px;
   }
 
   /* Na tabletu a mobilu už nemůžeme mít fixních 500px, 
@@ -112,14 +137,17 @@
   .about_square,
   .about_image {
     width: 100%;
-    max-width: 500px; /* Ale ne víc než 500px */
+    max-width: 600px; /* Ale ne víc než 500px */
     height: auto; /* Výška se dopočítá */
   }
 
-  /* Protože height je auto, musíme obrázku nastavit poměr stran nebo min-výšku */
-  .about_image {
-    min-height: 400px;
+  .about_title {
+    justify-content: space-between;
+    text-align: center;
+    max-width: 800px;
   }
+
+  /* Protože height je auto, musíme obrázku nastavit poměr stran nebo min-výšku */
 
   .about_square {
     height: 100%; /* Čtverec se přizpůsobí nové výšce obrázku */

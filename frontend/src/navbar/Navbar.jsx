@@ -16,21 +16,19 @@ function Navbar_final() {
   return (
     <div className="navbar_final">
       {/* LOGO */}
-      <div className="nav_container">
-        <div className="logo-container">
-          <span className="logo_text_top">KOMFORTNÍ</span>
-          <span className="logo_text_bottom">PODLAHY</span>
+      <div className="logo-container">
+        <span className="logo_text_top">KOMFORTNÍ</span>
+        <span className="logo_text_bottom">PODLAHY</span>
+      </div>
+      <div className={`nav-links ${isOpen ? "active" : ""}`}>
+        <div className="Design">
+          <label>Designové podlahy</label>
         </div>
-        <div className={`nav-links ${isOpen ? "active" : ""}`}>
-          <div className="Design">
-            <label>Designové podlahy</label>
-          </div>
-          <div className="Design">
-            <label>Průmyslové podlahy</label>
-          </div>
-          <div className="Kontakt">
-            <label>Kontakt</label>
-          </div>
+        <div className="Design">
+          <label>Průmyslové podlahy</label>
+        </div>
+        <div className="Kontakt">
+          <label>Kontakt</label>
         </div>
       </div>
 

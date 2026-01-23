@@ -79,11 +79,12 @@
   top: 0;
   left: 0;
   width: 100%;
+  gap: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  height: 8vh;
+  height: 76px;
   z-index: 10;
   background: rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
@@ -95,10 +96,6 @@
 .navbar_final .Design {
   font-size: 1.25rem;
   font-family: "Montserrat", sans-serif;
-}
-
-.navbar_final > div {
-  margin: 0 1rem;
 }
 
 .navbar_final .Kontakt {
@@ -148,6 +145,12 @@
   .navbar_final .Design,
   .navbar_final .Kontakt {
     font-size: 1rem;
+  }
+  .navbar_final {
+    gap: 60px;
+  }
+  .nav-links {
+    gap: 120px;
   }
 }
 
